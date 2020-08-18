@@ -9,7 +9,7 @@ int main()
     char ch;
     int counter = 0;
 
-    filePointer = fopen("pg10.txt", "r+");
+    filePointer = fopen("biblia.txt", "r+");
 
     while ((ch = fgetc(filePointer)) != EOF)
     {
