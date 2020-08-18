@@ -9,7 +9,7 @@ void main()
     const char divider[2] = " ";
     int counter = 0;
 
-    fp = fopen("pg10.txt", "r");
+    fp = fopen("biblia.txt", "r");
 
     // iterates each file lines
     while ((fgets(buff, 255 , (FILE*)fp)) != NULL)
@@ -19,7 +19,8 @@ void main()
         // iterates each line words
         while(line != NULL){
             // first letter of word is 'a' or 'A', then counter++
-            if( line[0] == 'a' || line[0] == 'A' ) counter++;
+            //if( (line[0] == 'a' || line[0] == 'A') && strlen(line) >= 3 ) counter++;
+            if( line[0] == 'a' && strlen(line) >= 3 ) counter++;
 
             line = strtok(NULL, divider);
         }
